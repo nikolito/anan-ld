@@ -1,0 +1,58 @@
+{
+	"@context": {
+		"Article": "https://api.hyper-local.jp/anan/Article",
+		"original_url": {
+			"@id": "https://api.hyper-local.jp/anan/original_url",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"title": {
+			"@id": "https://api.hyper-local.jp/anan/title",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"num_title_text": {
+			"@id": "https://api.hyper-local.jp/anan/num_title_text",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"main_text": {
+			"@id": "https://api.hyper-local.jp/anan/main_text",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"num_main_text": {
+			"@id": "https://api.hyper-local.jp/anan/num_main_text",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"register_date": {
+			"@id": "https://api.hyper-local.jp/anan/register_date",
+			"@type": "https://api.hyper-local.jp/anan/Article"
+		},
+		"hasNamedEntity": "https://api.hyper-local.jp/anan/hasNamedEntity",
+		"refArticle": "https://api.hyper-local.jp/anan/refArticle",
+		"NamedEntity": "https://api.hyper-local.jp/anan/NamedEntity",
+		"ne": {
+			"@id": "https://api.hyper-local.jp/anan/ne",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntity"
+		},
+		"section_ne": {
+			"@id": "https://api.hyper-local.jp/anan/section_ne",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntity"
+		},
+		"word_loc": {
+			"@id": "https://api.hyper-local.jp/anan/word_loc",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntity"
+		},
+		"word_start": {
+			"@id": "https://api.hyper-local.jp/anan/word_start",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntity"
+		},
+		"word_end": {
+			"@id": "https://api.hyper-local.jp/anan/word_end",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntity"
+		},
+		"NamedEntityClass": "https://api.hyper-local.jp/anan/NamedEntityClass",
+		"refNamedEntityClass": "https://api.hyper-local.jp/anan/refNamedEntityClass",
+		"class_name": {
+			"@id": "https://api.hyper-local.jp/anan/class_name",
+			"@type": "https://api.hyper-local.jp/anan/NamedEntityClass"
+		}
+	}
+}
