@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  mongo:
+    image: mongo:3.6
+    command: --nojournal
+
+  orion:
+    image: fiware/orion-ld
+    links:
+      - mongo
+    ports:
+      - "10260:1026"
+    #command: -dbhost mongo
+    command: -dbhost mongo -logLevel FATAL
