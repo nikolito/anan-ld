@@ -1,7 +1,7 @@
 # anan-ld
 
 ## About these data
-This repository shows an ontology and a NGSI-LD context for public email data in Saga prefecture in Japan.
+This repository shows an ontology and a [NGSI-LD](https://github.com/FIWARE/NGSI-LD_Experimental) context for public email data in Saga prefecture in Japan.
 The email informs what happen in Saga area mainly about the disastrous weather, fires, social troubles like frauds so called "Oreore sagi", traffic information and so on to make Saga people informed quickly.
 Diagrams in Japanese are shown in "anan20191023.pdf".
 
