@@ -9,5 +9,7 @@ services:
     image: fiware/orion-ld
     links:
       - mongo
+    ports:
+    - "1026:1026"
     #command: -dbhost mongo
     command: -dbhost mongo -logLevel FATAL
