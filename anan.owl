@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://api.hyper-local.jp/anan/"
+     xml:base="https://api.hyper-local.jp/anan/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://api.hyper-local.jp/anan/">
+        <dc:creator xml:lang="ja">Natsuko Yoshiga, Saga University, Japan</dc:creator>
+        <terms:contributor xml:lang="ja">佐賀県</terms:contributor>
+        <rdfs:label xml:lang="ja">防災メールあんあん</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://anzen.jp47.net/magsearch.php?p=41&amp;m=697"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/hasNamedEntity -->
+
+    <owl:ObjectProperty rdf:about="https://api.hyper-local.jp/anan/hasNamedEntity">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+        <rdfs:range rdf:resource="https://api.hyper-local.jp/anan/NamedEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/refArticle -->
+
+    <owl:ObjectProperty rdf:about="https://api.hyper-local.jp/anan/refArticle">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/NamedEntity"/>
+        <rdfs:range rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/refNamedEntityClass -->
+
+    <owl:ObjectProperty rdf:about="https://api.hyper-local.jp/anan/refNamedEntityClass">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/NamedEntity"/>
+        <rdfs:range rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/class_name -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/class_name">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ja">クラス名</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/main_text -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/main_text">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ja">本文</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/ne -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/ne">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/NamedEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ja">固有表現</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/num_main_text -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/num_main_text">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/main_text"/>
+        <rdfs:label xml:lang="ja">総文字数</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/num_title_text -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/num_title_text">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/title"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="ja">総文字数</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/original_url -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/original_url">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="ja">取得元URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/register_date -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/register_date">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ja">登録日</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/section_ne -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/section_ne">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/ne"/>
+        <rdfs:label xml:lang="ja">所在</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/title -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/title">
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ja">件名</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/word_end -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/word_end">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/word_loc"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="ja">終了位置</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/word_loc -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/word_loc">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/ne"/>
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/anan/NamedEntity"/>
+        <rdfs:label xml:lang="ja">文字位置</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/word_start -->
+
+    <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/anan/word_start">
+        <rdfs:subPropertyOf rdf:resource="https://api.hyper-local.jp/anan/word_loc"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="ja">開始位置</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Article -->
+
+    <owl:Class rdf:about="https://api.hyper-local.jp/anan/Article">
+        <rdfs:label xml:lang="ja">記事</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/NamedEntity -->
+
+    <owl:Class rdf:about="https://api.hyper-local.jp/anan/NamedEntity">
+        <rdfs:label xml:lang="ja">固有表現</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/NamedEntityClass -->
+
+    <owl:Class rdf:about="https://api.hyper-local.jp/anan/NamedEntityClass">
+        <rdfs:label xml:lang="ja">固有表現クラス</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Date -->
+
+    <owl:NamedIndividual rdf:about="https://api.hyper-local.jp/anan/Date">
+        <rdf:type rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:label xml:lang="ja">日時</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Organization -->
+
+    <owl:NamedIndividual rdf:about="https://api.hyper-local.jp/anan/Organization">
+        <rdf:type rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:label xml:lang="ja">団体名</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Person -->
+
+    <owl:NamedIndividual rdf:about="https://api.hyper-local.jp/anan/Person">
+        <rdf:type rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:label xml:lang="ja">人名</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Place -->
+
+    <owl:NamedIndividual rdf:about="https://api.hyper-local.jp/anan/Place">
+        <rdf:type rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:label xml:lang="ja">地名</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://api.hyper-local.jp/anan/Topic -->
+
+    <owl:NamedIndividual rdf:about="https://api.hyper-local.jp/anan/Topic">
+        <rdf:type rdf:resource="https://api.hyper-local.jp/anan/NamedEntityClass"/>
+        <rdfs:label xml:lang="ja">トピック</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
